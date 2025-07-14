@@ -29,6 +29,7 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   title: "Alex Hawley",
   description: "Partner Solutions Engineer @ Vercel",
+    generator: 'v0.dev'
 };
 
 export default function RootLayout({

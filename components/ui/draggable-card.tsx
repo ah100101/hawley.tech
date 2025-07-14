@@ -16,9 +16,11 @@ import {
 export const DraggableCardBody = ({
   className,
   children,
+  drag = true, // Default drag to true
 }: {
   className?: string
   children?: React.ReactNode
+  drag?: boolean // Add drag prop
 }) => {
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
@@ -91,7 +93,7 @@ export const DraggableCardBody = ({
   return (
     <motion.div
       ref={cardRef}
-      drag
+      drag={drag} // Use the drag prop
       dragConstraints={constraints}
       onDragStart={() => {
         document.body.style.cursor = "grabbing"
