@@ -1,8 +1,12 @@
-import Image from "next/image" // Import next/image
-import { DraggableCardBody, DraggableCardContainer } from "@/components/ui/draggable-card"
+import Image from "next/image"; // Import next/image
+import {
+  DraggableCardBody,
+  DraggableCardContainer,
+} from "@/components/ui/draggable-card";
 
 // A tiny, transparent GIF for blurring
-const BLUR_DATA_URL = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+const BLUR_DATA_URL =
+  "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
 
 export default function DraggablePhotoGallery() {
   const items = [
@@ -55,7 +59,7 @@ export default function DraggablePhotoGallery() {
         "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       className: "absolute top-8 left-[30%] rotate-[4deg]",
     },
-  ]
+  ];
 
   return (
     <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
@@ -78,5 +82,5 @@ export default function DraggablePhotoGallery() {
         </DraggableCardBody>
       ))}
     </DraggableCardContainer>
-  )
+  );
 }
