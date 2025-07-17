@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Footer from "@/components/layout/footer";
+
+export const dynamic = "force-static";
 
 export default function AboutPage() {
   return (

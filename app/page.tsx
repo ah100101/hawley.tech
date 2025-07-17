@@ -1,6 +1,8 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import Link from "next/link";
 
+export const dynamic = "force-static";
+
 export default function PortfolioPage() {
   return (
     <div className="flex-grow flex flex-col items-center justify-center w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-24">
