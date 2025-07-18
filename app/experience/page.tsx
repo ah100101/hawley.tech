@@ -27,7 +27,7 @@ const experiences: ExperienceItem[] = [
       </svg>
     ),
     yearRange: "2022 - Present",
-    title: "Team Lead, Partner Solutions",
+    title: "Senior Manager, Partner Solutions Engineering",
   },
   {
     companyName: "Rightpoint",

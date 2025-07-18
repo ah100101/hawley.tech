@@ -14,11 +14,7 @@ export default function PortfolioPage() {
           <div className="text-lg text-neutral-300 max-w-2xl sm:text-base space-y-2">
             <p>
               I'm Alex — a Chicagoan and Partner Solutions Manager at ▲
-              <Link
-                href="https://vercel.com"
-                className="font-bold"
-                target="_blank"
-              >
+              <Link href="https://vercel.com" className="font-bold">
                 Vercel
               </Link>
               .
@@ -33,7 +29,7 @@ export default function PortfolioPage() {
         </div>
 
         <div className="flex space-x-5 mt-8">
-          <a
+          <Link
             href="https://github.com/ah100101"
             target="_blank"
             rel="noopener noreferrer"
@@ -41,32 +37,44 @@ export default function PortfolioPage() {
             className="text-neutral-400 hover:text-white transition-colors"
           >
             <Github size={24} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.linkedin.com/in/ahawley37"
-            target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
             className="text-neutral-400 hover:text-white transition-colors"
           >
             <Linkedin size={24} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://x.com/hawley_tech"
-            target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
             className="text-neutral-400 hover:text-white transition-colors"
           >
-            <Twitter size={24} />
-          </a>
-          <a
+            <svg
+              data-testid="geist-icon"
+              height="24"
+              strokeLinejoin="round"
+              style={{ color: "currentColor" }}
+              viewBox="0 0 16 16"
+              width="24"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.60022 2H5.80022L8.78759 6.16842L12.4002 2H14.0002L9.5118 7.17895L14.4002 14H10.2002L7.21285 9.83158L3.60022 14H2.00022L6.48864 8.82105L1.60022 2ZM10.8166 12.8L3.93657 3.2H5.18387L12.0639 12.8H10.8166Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </Link>
+          <Link
             href="mailto:alex@hawley.tech"
             aria-label="Email"
             className="text-neutral-400 hover:text-white transition-colors"
           >
             <Mail size={24} />
-          </a>
+          </Link>
         </div>
       </div>
     </div>
