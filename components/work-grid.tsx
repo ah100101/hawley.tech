@@ -1,20 +1,25 @@
-import type React from "react";
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import Image from "next/image";
+import type React from "react"
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid"
+import Image from "next/image"
 
 // Define the type for work items
 export type WorkItem = {
-  title: string;
-  description: string;
-  imageUrl: string;
-  className: string;
-  icon: React.ReactNode;
-  href?: string;
-};
+  title: string
+  description: string
+  imageUrl: string
+  className: string
+  icon: React.ReactNode
+  href?: string
+  // Added optional event property
+  event?: {
+    name: string
+    date: string
+  }
+}
 
 type WorkGridProps = {
-  items: WorkItem[];
-};
+  items: WorkItem[]
+}
 
 export default function WorkGrid({ items }: WorkGridProps) {
   return (
@@ -28,10 +33,11 @@ export default function WorkGrid({ items }: WorkGridProps) {
           className={item.className}
           icon={item.icon}
           href={item.href}
+          event={item.event}
         />
       ))}
     </BentoGrid>
-  );
+  )
 }
 
 const WorkBanner = ({ src, alt }: { src: string; alt: string }) => (
@@ -44,4 +50,4 @@ const WorkBanner = ({ src, alt }: { src: string; alt: string }) => (
       className="object-cover object-center w-full h-full rounded-xl"
     />
   </div>
-);
+)
