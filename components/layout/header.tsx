@@ -9,8 +9,8 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/experience", label: "Experience" },
   { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/about", label: "About" }, // Moved About to the end
 ]
 
 export default function Header() {
