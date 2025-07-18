@@ -1,6 +1,14 @@
 import type React from "react"
 import { cn } from "@/lib/utils"
-import { IconExternalLink, IconCalendar } from "@tabler/icons-react"
+import {
+  IconExternalLink,
+  IconClipboardCopy,
+  IconTableColumn,
+  IconBulb,
+  IconMicrophone,
+  IconPresentation,
+  IconCalendar,
+} from "@tabler/icons-react"
 
 export const BentoGrid = ({
   className,
@@ -9,56 +17,64 @@ export const BentoGrid = ({
   className?: string
   children?: React.ReactNode
 }) => {
-  return (
-    <div className={cn("mx-auto grid max-w-8xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3", className)}>
-      {children}
-    </div>
-  )
+  return <div className={cn("mx-auto grid max-w-8xl grid-cols-1 gap-4 md:grid-cols-3", className)}>{children}</div>
 }
+
+const workItemTypes = {
+  guide: { icon: <IconClipboardCopy className="h-4 w-4" />, label: "Guide" },
+  template: { icon: <IconTableColumn className="h-4 w-4" />, label: "Template" },
+  solution: { icon: <IconBulb className="h-4 w-4" />, label: "Solution" },
+  webinar: { icon: <IconMicrophone className="h-4 w-4" />, label: "Webinar" },
+  talk: { icon: <IconPresentation className="h-4 w-4" />, label: "Talk" },
+  event: { icon: <IconCalendar className="h-4 w-4" />, label: "Event" },
+} as const
+
+export type WorkItemType = keyof typeof workItemTypes
 
 export const BentoGridItem = ({
   className,
   title,
   description,
   header,
-  icon,
+  type,
   href,
-  event,
+  eventName,
+  date,
 }: {
   className?: string
   title?: string | React.ReactNode
   description?: string | React.ReactNode
   header?: React.ReactNode
-  icon?: React.ReactNode
+  type: WorkItemType
   href?: string
-  event?: {
-    name: string
-    date: string
-  }
+  eventName?: string
+  date?: string
 }) => {
+  const typeInfo = workItemTypes[type]
+  const label = eventName || typeInfo.label
+
   // Wrap content in a link if href is provided
   const content = (
     <>
       {header}
-      <div className="transition duration-200 group-hover/bento:translate-x-2">
-        {/* Added flex container for icon and external link indicator */}
-        <div className="flex items-center justify-between mb-2">
-          {icon}
-          {/* Show external link icon only for linked items */}
-          {href && (
-            <IconExternalLink className="h-4 w-4 text-neutral-400 opacity-60 group-hover/bento:opacity-100 transition-opacity" />
-          )}
-        </div>
-        <div className="mt-2 mb-2 font-sans font-bold text-neutral-200">{title}</div>
-        {/* Added event information display */}
-        {event && (
-          <div className="flex items-center gap-1 mb-2 text-xs text-neutral-400">
-            <IconCalendar className="h-3 w-3" />
-            <span>
-              {event.name} • {event.date}
-            </span>
+      {/* Consolidate all text content into a single div for better layout control */}
+      <div>
+        {/* Meta row with event info and external link icon - removed icon from here */}
+        <div className="flex justify-between items-center mb-2 text-xs text-neutral-400">
+          <div className="flex items-center gap-2">
+            <span>{label}</span>
+            {date && (
+              <>
+                <span>•</span>
+                <span>{date}</span>
+              </>
+            )}
           </div>
-        )}
+          {href && <IconExternalLink className="h-4 w-4" />}
+        </div>
+        {/* Title */}
+        <div className="font-sans font-bold text-neutral-200 mb-2">{title}</div>
+        {/* Description */}
         <div className="font-sans text-xs font-normal text-neutral-300">{description}</div>
       </div>
     </>
@@ -71,7 +87,7 @@ export const BentoGridItem = ({
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl bg-white p-4 transition duration-200 hover:shadow-xl dark:bg-black dark:shadow-none cursor-pointer hover:scale-[1.02]",
+          "group/bento shadow-input flex flex-col justify-between space-y-4 rounded-xl bg-white p-4 transition duration-200 hover:shadow-xl dark:bg-black dark:shadow-none cursor-pointer hover:scale-[1.02]",
           className,
         )}
       >
@@ -84,7 +100,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl bg-white p-4 transition duration-200 dark:bg-black dark:shadow-none cursor-default opacity-90",
+        "group/bento shadow-input flex flex-col justify-between space-y-4 rounded-xl bg-white p-4 transition duration-200 dark:bg-black dark:shadow-none cursor-default opacity-90",
         className,
       )}
     >
