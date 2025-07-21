@@ -18,7 +18,7 @@ export default function DraggablePhotoGallery() {
   const items = [
     {
       title: "Antarctica",
-      description: "Expedition at the end of the world",
+      description: "At Port Lockroy on day 7 of the expedition",
       date: "Nov. '24",
       image:
         "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/antarctica-2024",
@@ -26,7 +26,7 @@ export default function DraggablePhotoGallery() {
     },
     {
       title: "Kinzie",
-      description: "A rare non-zoomin' moment",
+      description: "50% Boxer / 50% fur missile",
       date: "Oct. '23",
       image:
         "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/kinzie-2023",
@@ -34,42 +34,42 @@ export default function DraggablePhotoGallery() {
     },
     {
       title: "Kilimanjaro",
-      description: "8 days on the Lemosho route",
+      description: "Early morning at the end of the Lemosho route",
       date: "Feb '20",
       image:
         "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/kilimanjaro-2-2020",
       className: "absolute top-[20%] left-[40%] rotate-[8deg]",
     },
     {
-      title: "Chicago Marathon",
-      description: "My last marathon (~3:33:00)",
-      date: "Oct. 2021",
+      title: "Chicago Marathon '21",
+      description: "My last marathon, it was a hot one (~3:33:00)",
+      date: "Oct. '21",
       image:
         "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/last-marathon",
       className: "absolute top-[45%] left-[55%] rotate-[10deg]",
     },
     {
-      title: "Chicago Marathon",
-      description: "My first marathon (~4:45:00)",
-      date: "Oct. 2009",
+      title: "Chicago Marathon '09",
+      description: "My first, very slow, marathon (~4:45:00)",
+      date: "Oct. '09",
       image:
         "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/first-marathon",
       className: "absolute top-[30%] right-[35%] rotate-[2deg]",
     },
     {
-      title: "New Zealand",
-      description: "South Island landscapes",
-      date: "February 2020",
+      title: "Ireland",
+      description: "The Cliffs of Moher",
+      date: "Nov. '19",
       image:
-        "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/ireland-19",
       className: "absolute top-[55%] left-[45%] rotate-[-7deg]",
     },
     {
-      title: "Canada",
-      description: "Rocky Mountain wilderness",
-      date: "September 2021",
+      title: "Antarctica",
+      description: "Near Cuverville Island",
+      date: "Nov. '24",
       image:
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/antarctica-cuverville-island",
       className: "absolute top-[35%] left-[30%] rotate-[4deg]",
     },
   ];
@@ -97,12 +97,12 @@ export default function DraggablePhotoGallery() {
               blurDataURL={BLUR_DATA_URL}
             />
           </div>
-          <div className="mt-4 flex w-full justify-between font-handwriting text-neutral-700">
-            <div>
+          <div className="mt-4 flex flex-col w-full justify-between font-handwriting text-neutral-700">
+            <div className="flex justify-between">
               <h3 className="text-xl">{item.title}</h3>
-              <p className="text-base font-normal">{item.description}</p>
+              <p className="text-lg font-normal">{item.date}</p>
             </div>
-            <p className="text-lg font-normal">{item.date}</p>
+            <p className="text-base font-normal">{item.description}</p>
           </div>
         </DraggableCardBody>
       ))}
