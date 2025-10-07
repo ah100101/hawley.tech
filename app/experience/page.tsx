@@ -1,6 +1,26 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 
 export const dynamic = "force-static";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "https://hawley.tech";
+
+  return {
+    title: "Experience - Alex Hawley",
+    description:
+      "Professional experience at Vercel, Rightpoint, One North Interactive, and more.",
+    openGraph: {
+      type: "website",
+      title: "Experience - Alex Hawley",
+      description:
+        "Professional experience at Vercel, Rightpoint, One North Interactive, and more.",
+      url: `${baseUrl}/experience`,
+    },
+  };
+}
 
 interface ExperienceItem {
   companyName: string;

@@ -1,7 +1,25 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
 
 export const dynamic = "force-static";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "https://hawley.tech";
+
+  return {
+    title: "Alex Hawley - Web Developer & Partner Solutions Manager",
+    description: "Partner Solutions Manager at Vercel. Web developer with 15+ years of experience building applications. Ultrarunner, world traveler, and dinosaur enthusiast.",
+    openGraph: {
+      type: "website",
+      title: "Alex Hawley - Web Developer & Partner Solutions Manager",
+      description: "Partner Solutions Manager at Vercel. Web developer with 15+ years of experience building applications. Ultrarunner, world traveler, and dinosaur enthusiast.",
+      url: baseUrl,
+    },
+  };
+}
 
 export default function PortfolioPage() {
   return (
