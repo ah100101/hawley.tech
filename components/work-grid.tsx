@@ -1,5 +1,9 @@
-import { BentoGrid, BentoGridItem, type WorkItemType } from "@/components/ui/bento-grid"
-import Image from "next/image"
+import {
+  BentoGrid,
+  BentoGridItem,
+  type WorkItemType,
+} from "@/components/ui/bento-grid";
+import Image from "next/image";
 import {
   IconClipboardCopy,
   IconTableColumn,
@@ -7,23 +11,23 @@ import {
   IconMicrophone,
   IconPresentation,
   IconCalendar,
-} from "@tabler/icons-react"
+} from "@tabler/icons-react";
 
 // Define the type for work items
 export type WorkItem = {
-  title: string
-  description?: string
-  imageUrl: string
-  className: string
-  type: WorkItemType
-  href?: string
-  eventName?: string
-  date?: string
-}
+  title: string;
+  description?: string;
+  imageUrl: string;
+  className: string;
+  type: WorkItemType;
+  href?: string;
+  eventName?: string;
+  date?: string;
+};
 
 type WorkGridProps = {
-  items: WorkItem[]
-}
+  items: WorkItem[];
+};
 
 // Map work item types to their icons
 const workItemTypeIcons = {
@@ -33,7 +37,7 @@ const workItemTypeIcons = {
   webinar: <IconMicrophone className="h-4 w-4" />,
   talk: <IconPresentation className="h-4 w-4" />,
   event: <IconCalendar className="h-4 w-4" />,
-} as const
+} as const;
 
 export default function WorkGrid({ items }: WorkGridProps) {
   return (
@@ -43,7 +47,9 @@ export default function WorkGrid({ items }: WorkGridProps) {
           key={i}
           title={item.title}
           description={item.description}
-          header={<WorkBanner src={item.imageUrl} alt={item.title} type={item.type} />}
+          header={
+            <WorkBanner src={item.imageUrl} alt={item.title} type={item.type} />
+          }
           className={item.className}
           type={item.type}
           href={item.href}
@@ -52,11 +58,19 @@ export default function WorkGrid({ items }: WorkGridProps) {
         />
       ))}
     </BentoGrid>
-  )
+  );
 }
 
-const WorkBanner = ({ src, alt, type }: { src: string; alt: string; type: WorkItemType }) => (
-  <div className="flex flex-1 w-full h-full rounded-xl border border-white relative">
+const WorkBanner = ({
+  src,
+  alt,
+  type,
+}: {
+  src: string;
+  alt: string;
+  type: WorkItemType;
+}) => (
+  <div className="flex flex-1 w-full min-h-[150px] h-full rounded-xl border border-white relative">
     <Image
       alt={alt}
       width="100"
@@ -69,4 +83,4 @@ const WorkBanner = ({ src, alt, type }: { src: string; alt: string; type: WorkIt
       {workItemTypeIcons[type]}
     </div>
   </div>
-)
+);

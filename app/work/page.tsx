@@ -37,6 +37,13 @@ interface WorkItemData {
 
 const workItems: WorkItemData[] = [
   {
+    title: "hawley.tech",
+    description: "The repository for this web app",
+    className: "md:col-span-3",
+    type: "template",
+    href: "https://github.com/ah100101/hawley.tech",
+  },
+  {
     title: "How to Optimize Next.js + Sitecore JSS",
     description: "A performance and usage guide for Next.js and Sitecore JSS",
     className: "md:col-span-2",

@@ -87,7 +87,7 @@ export const BentoGridItem = ({
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          "group/bento shadow-input flex flex-col justify-between space-y-4 rounded-xl bg-white p-4 transition duration-200 hover:shadow-xl dark:bg-black dark:shadow-none cursor-pointer hover:scale-[1.02]",
+          "group/bento shadow-input flex flex-col justify-between space-y-4 rounded-xl bg-white p-4 transition duration-200 hover:shadow-xl dark:bg-black dark:shadow-none cursor-pointer hover:scale-[1.02] min-h-[250px]",
           className,
         )}
       >
@@ -100,7 +100,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "group/bento shadow-input flex flex-col justify-between space-y-4 rounded-xl bg-white p-4 transition duration-200 dark:bg-black dark:shadow-none cursor-default opacity-90",
+        "group/bento shadow-input flex flex-col justify-between space-y-4 rounded-xl bg-white p-4 transition duration-200 dark:bg-black dark:shadow-none cursor-default opacity-90 min-h-[250px]",
         className,
       )}
     >
