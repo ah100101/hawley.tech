@@ -1,30 +1,69 @@
-# Minimal portfolio design
+# hawley.tech
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A minimal, dark-themed portfolio website built with modern web technologies.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/alex-hawley-pro/v0-minimal-portfolio-design)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/Kw20G5UxdNz)
+## Tech Stack
 
-## Overview
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Radix UI** - Accessible UI primitives
+- **Framer Motion** - Fluid animations
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- pnpm (recommended) or npm
+
+### Installation
+
+```bash
+# Install dependencies
+pnpm install
+```
+
+### Development
+
+```bash
+# Start development server
+pnpm dev
+
+# Open http://localhost:3000
+```
+
+### Building for Production
+
+```bash
+# Build the application
+pnpm build
+
+# Start production server
+pnpm start
+```
+
+## Project Structure
+
+```
+├── app/              # Next.js App Router pages
+├── components/       # React components
+│   ├── ui/          # Reusable UI components
+│   └── layout/      # Layout components
+├── lib/             # Utility functions
+├── hooks/           # Custom React hooks
+└── public/          # Static assets
+```
+
+## Features
+
+- Static site generation for optimal performance
+- Responsive design with mobile-first approach
+- Smooth page transitions and animations
+- Dark theme with custom typography
+- Image galleries with lightbox functionality
+- SEO optimized with Open Graph support
 
 ## Deployment
 
-Your project is live at:
-
-**[https://vercel.com/alex-hawley-pro/v0-minimal-portfolio-design](https://vercel.com/alex-hawley-pro/v0-minimal-portfolio-design)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/Kw20G5UxdNz](https://v0.dev/chat/projects/Kw20G5UxdNz)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+This site is deployed on [Vercel](https://vercel.com). Push to the main branch to trigger automatic deployments.
