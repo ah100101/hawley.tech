@@ -8,7 +8,6 @@ import {
   DraggableCardContainer,
 } from "@/components/ui/draggable-card";
 
-// A tiny, transparent GIF for blurring
 const BLUR_DATA_URL =
   "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
 
@@ -25,8 +24,15 @@ export default function DraggablePhotoGallery() {
       className: "absolute top-[35%] left-[30%] rotate-[4deg]",
     },
     {
+      title: "Chicago",
+      description: "",
+      date: "Nov. '18",
+      image: "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/home",
+      className: "absolute top-[35%] left-[30%] rotate-[4deg]",
+    },
+    {
       title: "Kinzie",
-      description: "50% Boxer / 50% fur missile",
+      description: "50% Boxer / 50% rocket ship",
       date: "Oct. '23",
       image:
         "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/kinzie-2023",
@@ -42,7 +48,7 @@ export default function DraggablePhotoGallery() {
     },
     {
       title: "Chicago Marathon '21",
-      description: "My last marathon, it was a hot one (~3:33:00)",
+      description: "My last marathon, it was hot (~3:33:00)",
       date: "Oct. '21",
       image:
         "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/last-marathon",
@@ -92,6 +98,7 @@ export default function DraggablePhotoGallery() {
               src={item.image || "/placeholder.svg"}
               alt={item.title}
               fill
+              quality={50}
               style={{ objectFit: "cover" }}
               placeholder="blur"
               blurDataURL={BLUR_DATA_URL}

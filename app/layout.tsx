@@ -3,33 +3,35 @@ import type { Metadata } from "next";
 import { Playfair_Display, IBM_Plex_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import Header from "@/components/layout/header"; // Import Header
-import Footer from "@/components/layout/footer"; // Import Footer
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair-display",
-  display: "block", // Use 'block' to wait for the font before rendering text
+  display: "block",
 });
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600"], // Adjusted weights for body text
+  weight: ["400", "500", "600"],
   variable: "--font-ibm-plex-mono",
-  display: "block", // Use 'block' to wait for the font before rendering text
+  display: "block",
 });
 
 const caveat = Caveat({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-caveat",
-  display: "block", // Use 'block' to wait for the font before rendering text
+  display: "block",
 });
 
 export const metadata: Metadata = {
   title: "Alex Hawley",
   description: "Partner Solutions Engineer @ Vercel",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 };
 
 export default function RootLayout({
@@ -51,6 +53,8 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow flex flex-col w-full">{children}</main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

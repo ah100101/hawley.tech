@@ -1,9 +1,9 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Github, Linkedin, Twitter, Mail } from "lucide-react"
-import type { Metadata } from "next"
+import Image from "next/image";
+import Link from "next/link";
+import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import type { Metadata } from "next";
 
-export const dynamic = "force-static"
+export const dynamic = "force-static";
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.VERCEL_URL
@@ -12,11 +12,13 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: "About - Alex Hawley",
-    description: "Senior Manager of Partner Solutions Engineering at Vercel. 15+ years building web applications, ultramarathon runner, and world traveler.",
+    description:
+      "Senior Manager of Partner Solutions Engineering at Vercel. 15+ years building web applications, ultramarathon runner, and world traveler.",
     openGraph: {
       type: "website",
       title: "About - Alex Hawley",
-      description: "Senior Manager of Partner Solutions Engineering at Vercel. 15+ years building web applications, ultramarathon runner, and world traveler.",
+      description:
+        "Senior Manager of Partner Solutions Engineering at Vercel. 15+ years building web applications, ultramarathon runner, and world traveler.",
       url: `${baseUrl}/about`,
     },
   };
@@ -84,21 +86,27 @@ export default function AboutPage() {
                 <Link href="https://vercel.com" className="font-bold">
                   Vercel
                 </Link>
-                . I collaborate with our partners to build the best experiences on the web.
+                . I collaborate with our partners to build the best experiences
+                on the web.
               </p>
               <p>
-                Before Vercel, I worked as a Web Developer, Software Quality Engineer, Tech Lead, Engineering Manager,
-                and Solutions Architect at digital agencies in Chicago. For well over a decade, I shipped applications
-                for businesses ranging from local moving companies to Fortune 500 enterprises.
+                Before Vercel, I worked as a Web Developer, Software Quality
+                Engineer, Tech Lead, Engineering Manager, and Solutions
+                Architect at digital agencies in Chicago. For well over a
+                decade, I shipped applications for businesses ranging from local
+                moving companies to Fortune 500 enterprises.
               </p>
               <p>
-                Shipping is great, but what I've valued the most is collaborating with teams to solve hard problems -
-                especially when the path isn't easy.
+                Shipping is great, but what I value the most is collaborating
+                with teams to solve problems - especially when the path isn't
+                easy.
               </p>
               <p>
-                Similarly, outside of web development, I run long distances and have finished more than 35 marathons and
-                ultramarathons. I've dabbled in high altitude treks including reaching the summit of Mount Kilimanjaro.
-                Closer to home, I constantly walk my high energy Boxer/Lab, Kinzie, and take advantage of Chicago's
+                Similarly, outside of web development, I run long distances and
+                have finished more than 35 marathons and ultramarathons. I've
+                dabbled in high altitude treks including reaching the summit of
+                Mount Kilimanjaro. Closer to home, I constantly walk my high
+                energy Boxer/Lab, Kinzie, and take advantage of Chicago's
                 superior food scene. I never enjoy ketchup on a hotdog.
               </p>
             </div>
@@ -106,5 +114,5 @@ export default function AboutPage() {
         </div>
       </main>
     </div>
-  )
+  );
 }

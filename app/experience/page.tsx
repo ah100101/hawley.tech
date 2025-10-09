@@ -147,10 +147,12 @@ export default function ExperiencePage() {
                   />
                 )}
                 <div>
-                  <h2 className="text-lg font-medium text-white">
+                  <h2 className="text-md md:text-lg font-medium text-white">
                     {exp.companyName}
                   </h2>
-                  <p className="text-base text-neutral-400">{exp.title}</p>
+                  <p className="text-sm md:text-base text-neutral-400">
+                    {exp.title}
+                  </p>
                 </div>
               </div>
               <p className="text-base text-neutral-500 text-right min-w-[120px]">
