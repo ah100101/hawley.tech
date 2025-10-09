@@ -46,7 +46,7 @@ const workItems: WorkItemData[] = [
   {
     title: "How to Optimize Next.js + Sitecore JSS",
     description: "A performance and usage guide for Next.js and Sitecore JSS",
-    className: "md:col-span-2",
+    className: "md:col-span-3",
     type: "guide",
     href: "https://vercel.com/guides/how-to-optimize-next.js-sitecore-jss",
   },
@@ -54,7 +54,7 @@ const workItems: WorkItemData[] = [
     title: "Step-by-Step Optimization for Next.js + Sitecore JSS",
     imageOverride:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/community-webinar-logo",
-    className: "md:col-span-1",
+    className: "md:col-span-3",
     type: "webinar",
     href: "https://www.youtube.com/watch?v=DohTSti7kew&t=4s",
     eventName: "Community Webinar",
