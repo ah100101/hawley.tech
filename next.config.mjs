@@ -10,12 +10,41 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com',
+        hostname: '5cjexcwufz95alg5.public.blob.vercel-storage.com',
         port: '',
         pathname: '/**',
       },
-    ],
-    unoptimized: true,
+      {
+        protocol: 'https',
+        hostname: 'opengraph.githubassets.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'vercel.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets.vercel.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images-www.contentful.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'the-platform-press.vercel.app',
+        port: '',
+        pathname: '/**',
+      },
+    ]
   },
 };
 

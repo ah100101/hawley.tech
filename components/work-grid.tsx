@@ -70,15 +70,14 @@ const WorkBanner = ({
   alt: string;
   type: WorkItemType;
 }) => (
-  <div className="flex flex-1 w-full min-h-[150px] h-full rounded-xl border border-white relative">
+  <div className="flex flex-1 w-full aspect-[2/1] rounded-xl border border-white relative">
     <Image
       alt={alt}
-      width="100"
-      height="100"
-      src={src || "/placeholder.svg"}
+      fill
+      quality={50}
+      src={src}
       className="object-cover object-center w-full h-full rounded-xl"
     />
-    {/* Icon overlay positioned on top-right of image */}
     <div className="absolute top-2 right-2 bg-black/70 backdrop-blur-sm rounded-lg p-2 text-white">
       {workItemTypeIcons[type]}
     </div>

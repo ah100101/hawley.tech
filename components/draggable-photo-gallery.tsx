@@ -95,11 +95,10 @@ export default function DraggablePhotoGallery() {
         >
           <div className="pointer-events-none relative z-10 h-80 w-full">
             <Image
-              src={item.image || "/placeholder.svg"}
+              src={item.image}
               alt={item.title}
               fill
-              quality={50}
-              style={{ objectFit: "cover" }}
+              quality={25}
               placeholder="blur"
               blurDataURL={BLUR_DATA_URL}
             />
