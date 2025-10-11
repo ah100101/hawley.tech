@@ -39,6 +39,7 @@ const experiences: ExperienceItem[] = [
         height="16"
         role="img"
         viewBox="0 0 74 64"
+        className="w-[24px] h-[24px] mx-2"
       >
         <path
           d="M37.5896 0.25L74.5396 64.25H0.639648L37.5896 0.25Z"
@@ -47,7 +48,7 @@ const experiences: ExperienceItem[] = [
       </svg>
     ),
     yearRange: "2022 - Present",
-    title: "Senior Manager, Partner Solutions Engineering",
+    title: "Senior Manager, Partner Solutions",
   },
   {
     companyName: "Rightpoint",

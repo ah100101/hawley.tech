@@ -101,6 +101,7 @@ export default function DraggablePhotoGallery() {
               quality={25}
               placeholder="blur"
               blurDataURL={BLUR_DATA_URL}
+              className="object-cover"
             />
           </div>
           <div className="mt-4 flex flex-col w-full justify-between font-handwriting text-neutral-700">
