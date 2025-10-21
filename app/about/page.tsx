@@ -76,7 +76,7 @@ export default function AboutPage() {
               </a>
             </div>
           </div>
-          <div className="md:col-span-2 text-center md:text-left">
+          <div className="md:col-span-2 text-left px-4">
             <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold mb-6 leading-tight">
               Hi! I'm Alex.
             </h1>
