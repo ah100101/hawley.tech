@@ -156,7 +156,7 @@ export default function ExperiencePage() {
                   </p>
                 </div>
               </div>
-              <p className="text-base text-neutral-500 text-right min-w-[120px]">
+              <p className="text-sm md:text-base text-neutral-500 text-right min-w-[120px]">
                 {exp.yearRange}
               </p>
             </div>
