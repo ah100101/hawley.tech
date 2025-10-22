@@ -11,11 +11,13 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: "Alex Hawley - Web Developer & Partner Solutions Manager",
-    description: "Partner Solutions Manager at Vercel. Web developer with 15+ years of experience building applications. Ultrarunner, world traveler, and dinosaur enthusiast.",
+    description:
+      "Partner Solutions Manager at Vercel. Web developer with 15+ years of experience building applications. Ultrarunner, world traveler, and dinosaur enthusiast.",
     openGraph: {
       type: "website",
       title: "Alex Hawley - Web Developer & Partner Solutions Manager",
-      description: "Partner Solutions Manager at Vercel. Web developer with 15+ years of experience building applications. Ultrarunner, world traveler, and dinosaur enthusiast.",
+      description:
+        "Partner Solutions Manager at Vercel. Web developer with 15+ years of experience building applications. Ultrarunner, world traveler, and dinosaur enthusiast.",
       url: baseUrl,
     },
   };
@@ -24,12 +26,12 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function PortfolioPage() {
   return (
     <div className="flex-grow flex flex-col items-center justify-center w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-24">
-      <div className="w-full max-w-2xl text-left">
+      <div className="w-full max-w-2xl text-left px-4 md:px-0">
         <div className="mb-8">
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-semibold mb-4 leading-tight">
             Web developer, ultrarunner, and dinosaur enthusiast.
           </h1>
-          <div className="text-lg text-neutral-300 max-w-2xl sm:text-base space-y-2">
+          <div className="text-base md:text-lg text-neutral-300 max-w-2xl sm:text-base space-y-2">
             <p>
               I'm Alex — a Chicagoan and Partner Solutions Manager at ▲
               <Link href="https://vercel.com" className="font-bold">
