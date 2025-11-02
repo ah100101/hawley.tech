@@ -42,6 +42,8 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-3",
     type: "template",
     href: "https://github.com/ah100101/hawley.tech",
+    imageOverride:
+      "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/hawley-tech",
   },
   {
     title: "How to Optimize Next.js + Sitecore JSS",
