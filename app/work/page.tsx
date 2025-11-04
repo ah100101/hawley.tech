@@ -83,6 +83,8 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-2",
     type: "template",
     href: "https://github.com/vercel-partner-solutions/sitecore-nextjs-optimization-template",
+    imageOverride:
+      "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/optimize-sitecore-jss-template.png",
   },
   {
     title: "Next.js + Salesforce Commerce Cloud",
