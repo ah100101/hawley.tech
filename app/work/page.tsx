@@ -93,6 +93,8 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-2",
     type: "template",
     href: "https://vercel.com/templates/ecommerce/next-js-salesforce-commerce-cloud",
+    imageOverride:
+      "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/nextjs-sfcc-template.png",
   },
   {
     title: "Vercel + Sitecore XM Cloud Guide",
