@@ -115,6 +115,8 @@ const workItems: WorkItemData[] = [
     href: "https://vercel.com/go/sfcc-next-js-template-workshop",
     eventName: "Webinar",
     date: "Jun. 2024",
+    imageOverride:
+      "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/nextjs-sfcc-webinar.png",
   },
   {
     title: "Fast and Safe Experimentation with Next.js + Optimizely",
