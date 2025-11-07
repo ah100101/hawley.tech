@@ -135,6 +135,8 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-2",
     type: "guide",
     href: "https://www.contentful.com/blog/integrate-contentful-next-js-app-router/",
+    imageOverride:
+      "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/contentful-nextjs-guide.png",
   },
   {
     title: "Next.js + Optimizely Experimentation",
