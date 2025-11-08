@@ -145,6 +145,8 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-3",
     type: "template",
     href: "https://github.com/vercel/nextjs-optimizely-experimentation",
+    imageOverride:
+      "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/optimizely-fx-template.png",
   },
   {
     title: "The Platform Press",
