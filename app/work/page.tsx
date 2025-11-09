@@ -155,6 +155,8 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-3",
     type: "template",
     href: "https://the-platform-press.vercel.app",
+    imageOverride:
+      "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/platform-press-image.png",
   },
 ];
 
