@@ -30,7 +30,7 @@ interface WorkItemData {
   className: string;
   type: WorkItemType;
   href: string;
-  imageOverride?: string;
+  imageUrl: string;
   eventName?: string;
   date?: string;
 }
@@ -42,7 +42,7 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-3",
     type: "template",
     href: "https://github.com/ah100101/hawley.tech",
-    imageOverride:
+    imageUrl:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/hawley-tech",
   },
   {
@@ -51,12 +51,12 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-2",
     type: "guide",
     href: "https://vercel.com/guides/how-to-optimize-next.js-sitecore-jss",
-    imageOverride:
+    imageUrl:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/optimize-sitecore-jss-guide.png",
   },
   {
     title: "Step-by-Step Optimization for Next.js + Sitecore JSS",
-    imageOverride:
+    imageUrl:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/community-webinar-logo",
     className: "md:col-span-1",
     type: "webinar",
@@ -71,7 +71,7 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-1",
     type: "talk",
     href: "https://vercel.com/resources/partner-talk-improve-core-web-vitals",
-    imageOverride:
+    imageUrl:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/vercel-logo",
     eventName: "Sitecore Symposium",
     date: "Oct. 2024",
@@ -83,7 +83,7 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-2",
     type: "template",
     href: "https://github.com/vercel-partner-solutions/sitecore-nextjs-optimization-template",
-    imageOverride:
+    imageUrl:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/optimize-sitecore-jss-template.png",
   },
   {
@@ -93,7 +93,7 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-2",
     type: "template",
     href: "https://vercel.com/templates/ecommerce/next-js-salesforce-commerce-cloud",
-    imageOverride:
+    imageUrl:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/nextjs-sfcc-template.png",
   },
   {
@@ -103,7 +103,7 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-1",
     type: "guide",
     href: "https://vercel.com/docs/integrations/cms/sitecore",
-    imageOverride:
+    imageUrl:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/vercel-logo",
   },
   {
@@ -115,7 +115,7 @@ const workItems: WorkItemData[] = [
     href: "https://vercel.com/go/sfcc-next-js-template-workshop",
     eventName: "Webinar",
     date: "Jun. 2024",
-    imageOverride:
+    imageUrl:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/nextjs-sfcc-webinar.png",
   },
   {
@@ -124,7 +124,7 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-1",
     type: "talk",
     href: "https://vercel.com/resources/workshop-fast-and-safe-experimentation",
-    imageOverride:
+    imageUrl:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/vercel-ship-24-headshot",
     eventName: "Vercel Ship",
     date: "Oct. 2024",
@@ -135,7 +135,7 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-2",
     type: "guide",
     href: "https://www.contentful.com/blog/integrate-contentful-next-js-app-router/",
-    imageOverride:
+    imageUrl:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/contentful-nextjs-guide.png",
   },
   {
@@ -145,7 +145,7 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-3",
     type: "template",
     href: "https://github.com/vercel/nextjs-optimizely-experimentation",
-    imageOverride:
+    imageUrl:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/optimizely-fx-template.png",
   },
   {
@@ -155,7 +155,7 @@ const workItems: WorkItemData[] = [
     className: "md:col-span-3",
     type: "template",
     href: "https://the-platform-press.vercel.app",
-    imageOverride:
+    imageUrl:
       "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/work/platform-press-image.png",
   },
 ];
@@ -163,9 +163,9 @@ const workItems: WorkItemData[] = [
 export default async function WorkPage() {
   const itemsWithOGImages = await Promise.all(
     workItems.map(async (item) => {
-      let imageUrl = item.imageOverride || "";
+      let imageUrl = item.imageUrl || "";
 
-      if (item.href && !item.imageOverride) {
+      if (item.href && !item.imageUrl) {
         const ogImage = await getOGImage(item.href);
         imageUrl = ogImage || "";
       }
