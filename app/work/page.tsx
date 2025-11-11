@@ -1,5 +1,4 @@
 import WorkGrid from "@/components/work-grid";
-import { getOGImage } from "@/lib/og-image";
 import type { WorkItemType } from "@/components/ui/bento-grid";
 import type { Metadata } from "next";
 
@@ -161,29 +160,13 @@ const workItems: WorkItemData[] = [
 ];
 
 export default async function WorkPage() {
-  const itemsWithOGImages = await Promise.all(
-    workItems.map(async (item) => {
-      let imageUrl = item.imageUrl || "";
-
-      if (item.href && !item.imageUrl) {
-        const ogImage = await getOGImage(item.href);
-        imageUrl = ogImage || "";
-      }
-
-      return {
-        ...item,
-        imageUrl,
-      };
-    })
-  );
-
   return (
     <div className="flex flex-col min-h-[calc(100vh-8rem)] bg-black text-white font-sans">
       <main className="flex-grow flex flex-col items-center justify-center w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="w-full">
           <h1 className="sr-only">My Work</h1>
           <div className="mb-16">
-            <WorkGrid items={itemsWithOGImages} />
+            <WorkGrid items={workItems} />
           </div>
         </div>
       </main>
