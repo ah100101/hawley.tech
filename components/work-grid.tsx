@@ -74,7 +74,6 @@ const WorkBanner = ({
     <Image
       alt={alt}
       fill
-      quality={50}
       src={src}
       className="object-cover object-center w-full h-full rounded-xl"
     />

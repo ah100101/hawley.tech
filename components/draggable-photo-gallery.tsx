@@ -98,7 +98,6 @@ export default function DraggablePhotoGallery() {
               src={item.image}
               alt={item.title}
               fill
-              quality={25}
               placeholder="blur"
               blurDataURL={BLUR_DATA_URL}
               className="object-cover"
