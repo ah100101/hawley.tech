@@ -78,6 +78,14 @@ export default function DraggablePhotoGallery() {
         "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/antarctica-cuverville-island",
       className: "absolute top-[35%] left-[30%] rotate-[4deg]",
     },
+    {
+      title: "Komodo",
+      description: "Komodo National Park",
+      date: "Nov. '25",
+      image:
+        "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/komodo-25",
+      className: "absolute top-[35%] left-[30%] rotate-[4deg]",
+    },
   ];
 
   return (
