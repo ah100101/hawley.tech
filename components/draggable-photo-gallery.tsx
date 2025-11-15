@@ -86,6 +86,14 @@ export default function DraggablePhotoGallery() {
         "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/komodo-25",
       className: "absolute top-[35%] left-[30%] rotate-[4deg]",
     },
+    {
+      title: "Indonisha",
+      description: "SCUBA trip to Komodo and Raja Ampat",
+      date: "Nov. '25",
+      image:
+        "https://5cjexcwufz95alg5.public.blob.vercel-storage.com/aph/indonisha-25",
+      className: "absolute top-[35%] left-[30%] rotate-[4deg]",
+    },
   ];
 
   return (
