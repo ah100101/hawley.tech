@@ -2,8 +2,6 @@ import WorkGrid from "@/components/work-grid";
 import type { WorkItemType } from "@/components/ui/bento-grid";
 import type { Metadata } from "next";
 
-export const dynamic = "force-static";
-
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
