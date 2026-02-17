@@ -27,7 +27,7 @@ export default function PortfolioPage() {
       <div className="w-full max-w-2xl text-left px-4 md:px-0">
         <div className="mb-8">
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-semibold mb-4 leading-tight">
-            Web developer, ultrarunner, and dinosaur enthusiast.
+            Builder, ultrarunner, and dinosaur enthusiast.
           </h1>
           <div className="text-base md:text-lg text-neutral-300 max-w-2xl sm:text-base space-y-2">
             <p>
@@ -41,7 +41,7 @@ export default function PortfolioPage() {
               I work with engineering teams to build a better web, and I've
               spent 15+ years building applications for businesses of all sizes.
               Beyond the web, I run <em>very</em> long distances, travel across
-              the world, and learn about our reptilian ancestors 🦖.
+              the world, and learn about our reptilian ancestors 🦖
             </p>
           </div>
         </div>
